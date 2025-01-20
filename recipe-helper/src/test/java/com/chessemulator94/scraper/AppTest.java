@@ -17,4 +17,17 @@ public class AppTest
     {
         assertTrue( true );
     }
+    
+    @Test
+    public void testApp() {
+        App app = new App();
+        assertTrue(app != null);
+    }
+
+    @Test
+    public void testGetDoc() {
+        assertTrue(App.getDoc("https://quotes.toscrape.com/") != null);
+    }
+
+
 }
