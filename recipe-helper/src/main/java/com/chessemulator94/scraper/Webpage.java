@@ -3,6 +3,7 @@ package com.chessemulator94.scraper;
 public class Webpage {
     
     // Parameters
+        // e.g can be found by googling "site:dirk.nl filetype:xml"
     private String BASE_SITE_MAP;
     private String PRODUCTS_SITE_MAP;
     private String URL;
@@ -19,6 +20,13 @@ public class Webpage {
         this.URL = URL;
         this.BASE_SITE_MAP = "";
         this.PRODUCTS_SITE_MAP = "";
+    }
+
+    // Constructor   
+    public Webpage(String URL, String BASE_SITE_MAP, String PRODUCTS_SITE_MAP){ 
+        this.URL = URL;
+        this.BASE_SITE_MAP = BASE_SITE_MAP;
+        this.PRODUCTS_SITE_MAP = PRODUCTS_SITE_MAP;
     }
 
     // Getters and Setters
