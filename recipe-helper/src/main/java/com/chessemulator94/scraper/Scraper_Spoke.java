@@ -2,23 +2,38 @@ package com.chessemulator94.scraper;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.parser.Parser;
 
 public class Scraper_Spoke {
     
-    static final String CHROME_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3";
-    static final String GOOGLE_REFERER = "http://www.google.com";
+    static final String CHROME_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36";
+    static final String GOOGLE_REFERRER = "http://www.google.com";
 
+    // 
     public static Document getDoc(String url) {
         Document doc = null; 
         try {
-            doc = Jsoup.connect(url).userAgent(CHROME_USER_AGENT).referrer(GOOGLE_REFERER).get();
+            doc = Jsoup.connect(url)
+                       .userAgent(CHROME_USER_AGENT)
+                       .referrer(GOOGLE_REFERRER)
+                       .get();
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Exception: " + e);
         } 
         return doc;
     }
 
+    // Returns a webpage as plain XML 
+    public static Document getDocAsXml(Webpage siteToScrape){
+        Document xmlDoc = null;
+        try {
+            xmlDoc = Jsoup.parse(Scraper_Spoke.getDoc(siteToScrape.getUrl()).html(), Parser.xmlParser());
+        } catch (Exception e){
+            System.out.println("Exception: " + e);
+        }
+        return xmlDoc;
 
+    }
 
 
 
