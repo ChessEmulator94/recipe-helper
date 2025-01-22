@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <!-- After building, run project using mvn exec:java -->
     <exec.mainClass>com.chessemulator94.scraper.App</exec.mainClass>
   </properties>
 
