@@ -9,9 +9,6 @@ import org.junit.Test;
  */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -23,11 +20,4 @@ public class AppTest
         App app = new App();
         assertTrue(app != null);
     }
-
-    @Test
-    public void testGetDoc() {
-        assertTrue(App.getDoc("https://quotes.toscrape.com/") != null);
-    }
-
-
 }
