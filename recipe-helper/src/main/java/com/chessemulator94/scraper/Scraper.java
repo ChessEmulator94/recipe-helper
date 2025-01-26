@@ -4,7 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.parser.Parser;
 
-public class Scraper_Spoke {
+public class Scraper {
     
     static final String CHROME_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36";
     static final String GOOGLE_REFERRER = "http://www.google.com";
@@ -27,7 +27,7 @@ public class Scraper_Spoke {
     public static Document getDocAsXml(Webpage siteToScrape){
         Document xmlDoc = null;
         try {
-            xmlDoc = Jsoup.parse(Scraper_Spoke.getDoc(siteToScrape.getUrl()).html(), Parser.xmlParser());
+            xmlDoc = Jsoup.parse(Scraper.getDoc(siteToScrape.getUrl()).html(), Parser.xmlParser());
         } catch (Exception e){
             System.out.println("Exception: " + e);
         }

@@ -15,7 +15,7 @@ public class App
         Webpage dirkWebpage = new Webpage("https://www.dirk.nl/boodschappen");
         dirkWebpage.setProductSiteMap("https://www.dirk.nl/products-sitemap.xml");
 
-        Document xmlDoc = Jsoup.parse(Scraper_Spoke.getDoc(dirkWebpage.getProductSiteMap()).html(), Parser.xmlParser());
+        Document xmlDoc = Jsoup.parse(Scraper.getDoc(dirkWebpage.getProductSiteMap()).html(), Parser.xmlParser());
         
         List<Element> allElements = xmlDoc.getElementsByTag("loc");
 

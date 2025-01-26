@@ -4,11 +4,11 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class Scraper_SpokeTest {
+public class ScraperTest {
 
     @Test
     public void testGetDoc() {
-        assertTrue(Scraper_Spoke.getDoc("https://www.dirk.nl/") != null);
+        assertTrue(Scraper.getDoc("https://www.dirk.nl/") != null);
     }
 
     @Test
@@ -16,7 +16,7 @@ public class Scraper_SpokeTest {
         Webpage testWebpage = new Webpage("https://www.dirk.nl/",
                                 "https://www.dirk.nl/sitemap.xml",
                             "https://www.dirk.nl/products-sitemap.xml");
-        assertTrue(Scraper_Spoke.getDocAsXml(testWebpage) != null);
+        assertTrue(Scraper.getDocAsXml(testWebpage) != null);
     }
 
 
