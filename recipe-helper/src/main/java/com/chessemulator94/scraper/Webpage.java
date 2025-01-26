@@ -1,5 +1,8 @@
 package com.chessemulator94.scraper;
 
+import java.util.List;
+import org.jsoup.nodes.Element;
+
 public class Webpage {
     
     // Parameters
@@ -7,6 +10,7 @@ public class Webpage {
     private String BASE_SITE_MAP;
     private String PRODUCTS_SITE_MAP;
     private String URL;
+    private List<Element> domElements;
 
     // Default Constructor
     public Webpage(){
