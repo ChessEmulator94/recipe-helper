@@ -13,16 +13,16 @@ public class App
     {
 
         Webpage dirkWebpage = new Webpage("https://www.dirk.nl/boodschappen");
-        dirkWebpage.setProductSiteMap("https://www.dirk.nl/products-sitemap.xml");
+        //dirkWebpage.setProductSiteMap("https://www.dirk.nl/products-sitemap.xml");
 
-        Document xmlDoc = Jsoup.parse(Scraper.getDoc(dirkWebpage.getProductSiteMap()).html(), Parser.xmlParser());
+        // Document xmlDoc = Jsoup.parse(Scraper.getDoc(dirkWebpage.getProductSiteMap()).html(), Parser.xmlParser());
         
-        List<Element> allElements = xmlDoc.getElementsByTag("loc");
+        // List<Element> allElements = xmlDoc.getElementsByTag("loc");
 
-        for (Element singleElement : allElements){
-            System.out.println(singleElement.text());
-            System.out.println();
-        }
+        // for (Element singleElement : allElements){
+        //     System.out.println(singleElement.text());
+        //     System.out.println();
+        // }
 
 
 

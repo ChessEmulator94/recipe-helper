@@ -4,7 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class ScraperTest {
+public class Scraper {
 
     // @Test
     // public void testGetDoc() {
